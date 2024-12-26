@@ -1,0 +1,17 @@
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/bin/Debug/net8.0/Catalog.Infrastructure.deps.json
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/bin/Debug/net8.0/Catalog.Infrastructure.dll
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/bin/Debug/net8.0/Catalog.Infrastructure.pdb
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/bin/Debug/net8.0/Catalog.Application.dll
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/bin/Debug/net8.0/Catalog.Core.dll
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/bin/Debug/net8.0/Catalog.Application.pdb
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/bin/Debug/net8.0/Catalog.Core.pdb
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.csproj.AssemblyReference.cache
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.AssemblyInfoInputs.cache
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.AssemblyInfo.cs
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog..168C4A48.Up2Date
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.dll
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/refint/Catalog.Infrastructure.dll
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.pdb
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/ref/Catalog.Infrastructure.dll
