@@ -3,8 +3,11 @@
 # Learn more about .gitignore:
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
-**/bin/
-**/obj/
+# Ignorar bin y obj únicamente dentro de la carpeta Services y sus subcarpetas
+Services/**/**/bin/
+Services/**/**/obj/
+
+# General rules
 .editorconfig
 .vs
 .vscode
