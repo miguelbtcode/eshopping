@@ -8,6 +8,7 @@
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Application/obj/Debug/net8.0/Catalog.Application.AssemblyInfoInputs.cache
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Application/obj/Debug/net8.0/Catalog.Application.AssemblyInfo.cs
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Application/obj/Debug/net8.0/Catalog.Application.csproj.CoreCompileInputs.cache
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Application/obj/Debug/net8.0/Catalog.Application.sourcelink.json
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Application/obj/Debug/net8.0/Catalog..75771DFE.Up2Date
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Application/obj/Debug/net8.0/Catalog.Application.dll
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Application/obj/Debug/net8.0/refint/Catalog.Application.dll

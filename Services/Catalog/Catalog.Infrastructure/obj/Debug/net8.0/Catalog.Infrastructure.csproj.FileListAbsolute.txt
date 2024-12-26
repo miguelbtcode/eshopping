@@ -10,6 +10,7 @@
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.AssemblyInfoInputs.cache
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.AssemblyInfo.cs
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.sourcelink.json
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog..168C4A48.Up2Date
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/Catalog.Infrastructure.dll
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.Infrastructure/obj/Debug/net8.0/refint/Catalog.Infrastructure.dll

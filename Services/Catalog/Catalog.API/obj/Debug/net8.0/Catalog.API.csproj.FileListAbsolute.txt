@@ -31,6 +31,7 @@
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.API/obj/Debug/net8.0/Catalog.API.csproj.CoreCompileInputs.cache
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.API/obj/Debug/net8.0/Catalog.API.MvcApplicationPartsAssemblyInfo.cs
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.API/obj/Debug/net8.0/Catalog.API.MvcApplicationPartsAssemblyInfo.cache
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.API/obj/Debug/net8.0/Catalog.API.sourcelink.json
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.API/obj/Debug/net8.0/scopedcss/bundle/Catalog.API.styles.css
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.API/obj/Debug/net8.0/staticwebassets.build.json
 /Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Services/Catalog/Catalog.API/obj/Debug/net8.0/staticwebassets.development.json
