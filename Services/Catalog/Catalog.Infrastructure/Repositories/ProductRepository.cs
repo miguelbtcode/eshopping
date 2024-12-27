@@ -21,7 +21,7 @@ public class ProductRepository : IProductRepository, IProductBrandRepository, IP
             .ToListAsync();
     }
 
-    public async Task<Product> GetProductAsync(string id)
+    public async Task<Product> GetProductByIdAsync(string id)
     {
         return await context.Products
             .Find(p => p.Id == id)
