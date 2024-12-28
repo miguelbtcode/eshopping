@@ -38,7 +38,7 @@ public class ProductRepository : IProductRepository, IProductBrandRepository, IP
     public async Task<IEnumerable<Product>> GetProductsByBrandNameAsync(string brandName)
     {
         return await context.Products
-            .Find(p => p.Brands!.Name.Equals(brandName, StringComparison.CurrentCultureIgnoreCase))
+            .Find(p => p.Brand!.Name.Equals(brandName, StringComparison.CurrentCultureIgnoreCase))
             .ToListAsync();
     }
 
