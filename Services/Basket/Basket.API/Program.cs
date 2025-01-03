@@ -1,9 +1,8 @@
 using System.Reflection;
 using Asp.Versioning;
-using Catalog.Application.Handlers;
-using Catalog.Core.Repositories;
-using Catalog.Infrastructure.Data;
-using Catalog.Infrastructure.Repositories;
+using Basket.Application.Handlers;
+using Basket.Core.Repositories;
+using Basket.Infrastructure.Repositories;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,7 +23,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "Catalog.API",
+        Title = "Basket.API",
         Version = "v1"
     });
 });
@@ -36,16 +35,19 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 var assembies = new[]
 {
     Assembly.GetExecutingAssembly(),
-    typeof(GetAllBrandsHandler).Assembly
+    typeof(CreateShoppingCartCommandHandler).Assembly
 };
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(assembies));
 
-// Register Application Services
-builder.Services.AddScoped<ICatalogContext, CatalogContext>();
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<IProductBrandRepository, ProductRepository>();
-builder.Services.AddScoped<IProductTypeRepository, ProductRepository>();
+// Redis configuration
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetValue<string>("CacheSettings:ConnectionString");
+});
+
+// Application Services
+builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 
 var app = builder.Build();
 

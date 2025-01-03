@@ -1,7 +1,6 @@
 namespace Catalog.API.Controllers;
 
 using Asp.Versioning;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiVersion("1")]
