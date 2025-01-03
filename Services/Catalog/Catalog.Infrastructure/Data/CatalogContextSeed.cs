@@ -15,6 +15,7 @@ public static class CatalogContextSeed
             return;
 
         var productsData = File.ReadAllText(path);
+        // var productsData = File.ReadAllText("../Catalog.Infrastructure/Data/SeedData/products.json");
         var products = JsonSerializer.Deserialize<List<Product>>(productsData);
 
         if (products == null)
