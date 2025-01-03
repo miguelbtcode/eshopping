@@ -15,6 +15,7 @@ public static class TypeContextSeed
             return;
 
         var productTypesData = File.ReadAllText(path);
+        // var productTypesData = File.ReadAllText("../Catalog.Infrastructure/Data/SeedData/types.json");
         var productTypes = JsonSerializer.Deserialize<List<ProductType>>(productTypesData);
 
         if (productTypes == null)

@@ -4,15 +4,12 @@ using System.Net;
 using Application.Commands;
 using Application.Queries;
 using Application.Responses;
+using Core.Specs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-public class CatalogController : ApiController
+public class CatalogController(IMediator mediator) : ApiController
 {
-    protected CatalogController(IMediator mediator) : base(mediator)
-    {
-    }
-    
     [HttpGet]
     [Route("[action]/{id}", Name = "GetProductById")]
     [ProducesResponseType(typeof(ProductResponse), (int)HttpStatusCode.OK)]
@@ -36,10 +33,10 @@ public class CatalogController : ApiController
     
     [HttpGet] 
     [Route("GetAllProducts")] 
-    [ProducesResponseType(typeof(IList<ProductResponse>), (int)HttpStatusCode.OK)]
-    public async Task<ActionResult<IList<ProductResponse>>> GetAllProducts()
+    [ProducesResponseType(typeof(Pagination<ProductResponse>), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<Pagination<ProductResponse>>> GetAllProducts([FromQuery] CatalogSpecParams catalogSpecParams)
     {
-        var query = new GetAllProductsQuery();
+        var query = new GetAllProductsQuery(catalogSpecParams);
         var result = await mediator.Send(query);
         return Ok(result);
     }

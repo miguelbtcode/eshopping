@@ -10,7 +10,9 @@ public class Product : BaseEntity
     public required string Summary { get; set; }
     public string Description { get; set; } = string.Empty;
     public string ImageFile { get; set; } = string.Empty;
+    [BsonElement("Brand")]
     public ProductBrand? Brand { get; set; }
+    [BsonElement("Type")]
     public ProductType? Type { get; set; }
     [BsonRepresentation(BsonType.Decimal128)]
     public decimal Price { get; set; }
