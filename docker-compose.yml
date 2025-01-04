@@ -6,6 +6,10 @@
   # Basket database configuration
   basketdb:
     image: redis:alpine
+    
+  # Discount database configuration
+  discountdb:
+    image: postgres
   
   # Catalog api configuration
   catalog.api:
@@ -21,10 +25,23 @@
       context: .
       dockerfile: Services/Basket/Basket.API/Dockerfile
       
+  # Discount api configuration
+  discount.api:
+    image: ${DOCKER_REGISTRY-}discountapi
+    build:
+      context: .
+      dockerfile: Services/Discount/Discount.API/Dockerfile
+      
   # Portainer configuration
   portainer:
     image: portainer/portainer-ce
+    
+  # PgAdmin configuration
+  pgadmin:
+    image: dpage/pgadmin4
       
 volumes:
   mongo_data:
   portainer_data:
+  postgres_data:
+  pgadmin_data:
