@@ -7,7 +7,7 @@ using Infrastructure.Repositories;
 
 public static class ApplicationServiceExtensions
 {
-    public static IServiceCollection ConfigureServices(this IServiceCollection services, IConfiguration configuration)
+    public static void ConfigureServices(this IServiceCollection services)
     {
         // Register AutoMapper
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
@@ -23,7 +23,5 @@ public static class ApplicationServiceExtensions
         // Register application services
         services.AddScoped<IDiscountRepository, DiscountRepository>();
         services.AddGrpc();
-
-        return services;
     }
 }

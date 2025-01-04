@@ -4,7 +4,7 @@ using Discount.Infrastructure.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 // Register service settings
-builder.Services.ConfigureServices(builder.Configuration);
+builder.Services.ConfigureServices();
 
 var app = builder.Build();
 
