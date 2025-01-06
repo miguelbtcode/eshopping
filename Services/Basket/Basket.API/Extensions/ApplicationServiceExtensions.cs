@@ -7,6 +7,7 @@ using Asp.Versioning;
 using Core.Repositories;
 using Discount.Grpc.Protos;
 using Infrastructure.Repositories;
+using MassTransit;
 using Microsoft.OpenApi.Models;
 
 public static class ApplicationServiceExtensions
@@ -60,5 +61,16 @@ public static class ApplicationServiceExtensions
         services.AddScoped<DiscountGrpcService>();
         services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>
             (cfg => cfg.Address = new Uri(configuration["GrpcSettings:DiscountUrl"]!));
+        
+        // Add MassTransit
+        services.AddMassTransit(config =>
+        {
+            config.UsingRabbitMq((ct, cfg) =>
+            {
+                cfg.Host(configuration["EventBusSettings:HostAddress"]);
+            });
+        });
+
+        services.AddMassTransitHostedService();
     }
 }
