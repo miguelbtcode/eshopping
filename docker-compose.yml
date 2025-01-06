@@ -10,6 +10,10 @@
   # Discount database configuration
   discountdb:
     image: postgres
+    
+  # Ordering database configuration
+  orderdb:
+    image: mcr.microsoft.com/mssql/server:2022-latest
   
   # Catalog api configuration
   catalog.api:
@@ -31,7 +35,14 @@
     build:
       context: .
       dockerfile: Services/Discount/Discount.API/Dockerfile
-      
+  
+  # Ordering api configuration
+  ordering.api:
+    image: ${DOCKER_REGISTRY-}orderingapi
+    build:
+      context: .
+      dockerfile: Services/Ordering/Ordering.API/Dockerfile
+  
   # Portainer configuration
   portainer:
     image: portainer/portainer-ce
