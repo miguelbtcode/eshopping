@@ -4,8 +4,8 @@
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
 # Ignorar bin y obj únicamente dentro de la carpeta Services y sus subcarpetas
-Infrastructure/EventBus.Messages/bin/
-Infrastructure/EventBus.Messages/obj/
+Infrastructure/**/bin/
+Infrastructure/**/obj/
 Services/**/**/bin/
 Services/**/**/obj/
 
