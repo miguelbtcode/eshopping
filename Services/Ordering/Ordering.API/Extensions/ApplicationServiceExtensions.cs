@@ -2,7 +2,10 @@ namespace Ordering.API.Extensions;
 
 using Application.Extensions;
 using Asp.Versioning;
+using EventBus.Messages.Common;
+using EventBusConsumer;
 using Infrastructure.Extensions;
+using MassTransit;
 using Microsoft.OpenApi.Models;
 
 public static class ApplicationServiceExtensions
@@ -26,6 +29,9 @@ public static class ApplicationServiceExtensions
         // Infrastructure services
         services.AddInfrastructureServices(configuration);
         
+        // Consumer service
+        services.AddScoped<BasketOrderingConsumer>();
+        
         // Swagger
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen(c =>
@@ -36,5 +42,23 @@ public static class ApplicationServiceExtensions
                 Version = "v1"
             });
         });
+        
+        // Add MassTransit
+        services.AddMassTransit(config =>
+        {
+            // Mark this as consumer
+            config.AddConsumer<BasketOrderingConsumer>();
+            config.UsingRabbitMq((ctx, cfg) =>
+            {
+                cfg.Host(configuration["EventBusSettings:HostAddress"]);
+                // Provide the queue name with consumer settings
+                cfg.ReceiveEndpoint(EventBusConstant.BasketCheckoutQueue, c =>
+                {
+                    c.ConfigureConsumer<BasketOrderingConsumer>(ctx);
+                });
+            });
+        });
+        
+        services.AddMassTransitHostedService();
     }
 }
