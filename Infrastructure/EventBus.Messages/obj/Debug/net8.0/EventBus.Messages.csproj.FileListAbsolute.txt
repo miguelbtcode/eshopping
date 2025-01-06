@@ -1,0 +1,12 @@
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/bin/Debug/net8.0/EventBus.Messages.deps.json
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/bin/Debug/net8.0/EventBus.Messages.dll
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/bin/Debug/net8.0/EventBus.Messages.pdb
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/obj/Debug/net8.0/EventBus.Messages.GeneratedMSBuildEditorConfig.editorconfig
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/obj/Debug/net8.0/EventBus.Messages.AssemblyInfoInputs.cache
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/obj/Debug/net8.0/EventBus.Messages.AssemblyInfo.cs
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/obj/Debug/net8.0/EventBus.Messages.csproj.CoreCompileInputs.cache
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/obj/Debug/net8.0/EventBus.Messages.sourcelink.json
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/obj/Debug/net8.0/EventBus.Messages.dll
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/obj/Debug/net8.0/refint/EventBus.Messages.dll
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/obj/Debug/net8.0/EventBus.Messages.pdb
+/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/obj/Debug/net8.0/ref/EventBus.Messages.dll
