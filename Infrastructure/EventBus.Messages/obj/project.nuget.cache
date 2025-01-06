@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jfk0qKcTFhU=",
+  "success": true,
+  "projectFilePath": "/Users/miguelbtcode/Cursos/backend/dotnet/microservices-dotnet/Eshopping/Infrastructure/EventBus.Messages/EventBus.Messages.csproj",
+  "expectedPackageFiles": [
+    "/Users/miguelbtcode/.nuget/packages/microsoft.netcore.app.ref/8.0.11/microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "/Users/miguelbtcode/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
