@@ -3,6 +3,9 @@ using Discount.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Register host settings
+builder.Host.ConfigureHost();
+
 // Register service settings
 builder.Services.ConfigureServices();
 

@@ -2,13 +2,15 @@ namespace Ordering.API.Extensions;
 
 using Application.Extensions;
 using Asp.Versioning;
+using Common.Logging;
 using EventBus.Messages.Common;
 using EventBusConsumer;
 using Infrastructure.Extensions;
 using MassTransit;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
-public static class ApplicationServiceExtensions
+public static class ApplicationBuilderExtensions
 {
     public static void ConfigureServices(this IServiceCollection services, IConfiguration configuration)
     {
@@ -60,5 +62,11 @@ public static class ApplicationServiceExtensions
         });
         
         services.AddMassTransitHostedService();
+    }
+    
+    public static void ConfigureHost(this ConfigureHostBuilder host)
+    {
+        // Add serilog
+        host.UseSerilog(Logging.ConfigureLogger);
     }
 }

@@ -4,9 +4,14 @@ using Catalog.Application.Handlers;
 using Catalog.Core.Repositories;
 using Catalog.Infrastructure.Data;
 using Catalog.Infrastructure.Repositories;
+using Common.Logging;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add serilog
+builder.Host.UseSerilog(Logging.ConfigureLogger);
 
 // Add controllers
 builder.Services.AddControllers();
