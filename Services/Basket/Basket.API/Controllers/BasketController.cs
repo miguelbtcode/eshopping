@@ -13,10 +13,14 @@ using Microsoft.AspNetCore.Mvc;
 public class BasketController : ApiController
 {
     private readonly IPublishEndpoint publishEndpoint;
+    private readonly ILogger<BasketController> logger;
     
-    public BasketController(IPublishEndpoint publishEndpoint)
+    public BasketController(
+        IPublishEndpoint publishEndpoint, 
+        ILogger<BasketController> logger)
     {
         this.publishEndpoint = publishEndpoint;
+        this.logger = logger;
     }
 
     [HttpGet]
@@ -63,6 +67,7 @@ public class BasketController : ApiController
         eventMessage.TotalPrice = basket.TotalPrice;
         // Publish the event
         await publishEndpoint.Publish(eventMessage);
+        logger.LogInformation("Basket Published for {userName}", basketCheckout.UserName);
         // Remove the basket
         var deleteBasketCmd = new DeleteBasketByUserNameCommand(basketCheckout.UserName);
         await mediator!.Send(deleteBasketCmd);
