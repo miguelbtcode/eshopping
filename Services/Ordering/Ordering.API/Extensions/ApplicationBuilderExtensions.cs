@@ -33,6 +33,7 @@ public static class ApplicationBuilderExtensions
         
         // Consumer service
         services.AddScoped<BasketOrderingConsumer>();
+        services.AddScoped<BasketOrderingConsumerV2>();
         
         // Swagger
         services.AddEndpointsApiExplorer();
@@ -50,6 +51,7 @@ public static class ApplicationBuilderExtensions
         {
             // Mark this as consumer
             config.AddConsumer<BasketOrderingConsumer>();
+            config.AddConsumer<BasketOrderingConsumerV2>();
             config.UsingRabbitMq((ctx, cfg) =>
             {
                 cfg.Host(configuration["EventBusSettings:HostAddress"]);
@@ -57,6 +59,11 @@ public static class ApplicationBuilderExtensions
                 cfg.ReceiveEndpoint(EventBusConstant.BasketCheckoutQueue, c =>
                 {
                     c.ConfigureConsumer<BasketOrderingConsumer>(ctx);
+                });
+                // V2 version
+                cfg.ReceiveEndpoint(EventBusConstant.BasketCheckoutQueueV2, c =>
+                {
+                    c.ConfigureConsumer<BasketOrderingConsumerV2>(ctx);
                 });
             });
         });

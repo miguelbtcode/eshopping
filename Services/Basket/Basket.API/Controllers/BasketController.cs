@@ -5,11 +5,13 @@ using Application.Commands;
 using Application.Mappers;
 using Application.Queries;
 using Application.Responses;
+using Asp.Versioning;
 using Core.Entities;
 using EventBus.Messages.Events;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 
+[ApiVersion("1")]
 public class BasketController : ApiController
 {
     private readonly IPublishEndpoint publishEndpoint;
