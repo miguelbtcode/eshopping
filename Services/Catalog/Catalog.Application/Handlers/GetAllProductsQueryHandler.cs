@@ -7,11 +7,11 @@ using MediatR;
 using Queries;
 using Responses;
 
-public class GetAllProductsHandler : IRequestHandler<GetAllProductsQuery, Pagination<ProductResponse>>
+public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, Pagination<ProductResponse>>
 {
     private readonly IProductRepository productRepository;
     
-    public GetAllProductsHandler(IProductRepository productRepository)
+    public GetAllProductsQueryHandler(IProductRepository productRepository)
     {
         this.productRepository = productRepository;
     }
