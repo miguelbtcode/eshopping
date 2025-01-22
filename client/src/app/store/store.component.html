@@ -2,7 +2,6 @@
   <div class="row">
     <section class="col-3">
       <ng-container *ngIf="products">
-        <!-- Sort -->
         <h5 class="text-warning mb-3">Sort</h5>
         <select
           class="custom-select mb-3"
@@ -12,10 +11,10 @@
             {{ sort.name }}
           </option>
         </select>
-        <!-- Brands -->
         <h5 class="text-warning ml-3">Brands</h5>
-        <ul class="list-group my-3" *ngFor="let brand of brands">
+        <ul class="list-group my-3">
           <li
+            *ngFor="let brand of brands"
             class="list-group-item"
             [class.active]="brand.id === this.storeParams.brandId"
             [value]="brand.id"
@@ -24,10 +23,10 @@
             {{ brand.name }}
           </li>
         </ul>
-        <!-- Types -->
         <h5 class="text-warning ml-3">Types</h5>
-        <ul class="list-group my-3" *ngFor="let type of types">
+        <ul class="list-group my-3">
           <li
+            *ngFor="let type of types"
             class="list-group-item"
             [class.active]="type.id === this.storeParams.typeId"
             [value]="type.id"
@@ -44,20 +43,24 @@
         <header>
           <span *ngIf="totalCount && totalCount > 0">
             Showing
-            <strong>
-              {{ (this.storeParams.pageNumber - 1) * this.storeParams.pageSize + 1 }}
+            <strong
+              >{{
+                (this.storeParams.pageNumber - 1) * this.storeParams.pageSize +
+                  1
+              }}
               -
-              {{ this.storeParams.pageNumber * this.storeParams.pageSize >
-                 this.totalCount
+              {{
+                this.storeParams.pageNumber * this.storeParams.pageSize >
+                this.totalCount
                   ? this.totalCount
                   : this.storeParams.pageNumber * this.storeParams.pageSize
               }}
             </strong>
             of <strong>{{ this.totalCount }}</strong> Results</span
           >
-          <span *ngIf="totalCount === 0">
-            There are <strong>0</strong> results for this filter
-          </span>
+          <span *ngIf="totalCount === 0"
+            >There are <strong>0</strong> results for this filter</span
+          >
         </header>
         <div class="form-inline mt-2">
           <input
@@ -96,19 +99,5 @@
         </div>
       </div>
     </section>
-    <div class="d-flex justify-content-center">
-      <pagination
-        [boundaryLinks]="true"
-        [totalItems]="this.totalCount"
-        previousText="&lsaquo;"
-        (pageChanged)="onPageChanged($event)"
-        [itemsPerPage]="this.storeParams.pageSize"
-        [maxSize]="10"
-        nextText="&rsaquo;"
-        firstText="&laquo;"
-        lastText="&raquo;"
-      >
-      </pagination>
-    </div>
   </div>
 </div>

@@ -10,9 +10,14 @@ import { StoreParams } from '../shared/models/storeParams';
   providedIn: 'root',
 })
 export class StoreService {
+
+  baseUrl = 'http://localhost:8000';
+
   constructor(private http: HttpClient) {}
 
-  baseUrl = 'http://localhost:8000/';
+  getProductById(id: string){
+    return this.http.get<IProduct>(this.baseUrl + '/api/v1/Catalog/GetProductById/' + id);
+  }
 
   getProducts(storeParams: StoreParams) {
     let params = new HttpParams();
@@ -31,7 +36,7 @@ export class StoreService {
     params = params.append('pageSize', storeParams.pageSize);
 
     return this.http.get<IPagination<IProduct>>(
-      this.baseUrl + 'api/v1/Catalog/GetAllProducts?PageIndex=1&PageSize=10',
+      this.baseUrl + '/api/v1/Catalog/GetAllProducts?PageIndex=1&PageSize=10',
       { params }
     );
   }

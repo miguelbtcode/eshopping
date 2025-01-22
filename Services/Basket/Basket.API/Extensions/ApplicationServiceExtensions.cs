@@ -15,6 +15,15 @@ public static class ApplicationServiceExtensions
 {
     public static void ConfigureServices(this IServiceCollection services, IConfiguration configuration)
     {
+        // Add cors
+        services.AddCors(options =>
+        {
+            options.AddPolicy("CorsPolicy", policy =>
+            {
+                policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+            });
+        });
+        
         // Add controllers
         services.AddControllers();
         
