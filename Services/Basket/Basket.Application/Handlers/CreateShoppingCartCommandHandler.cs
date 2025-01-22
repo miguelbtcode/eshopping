@@ -27,7 +27,8 @@ public sealed class CreateShoppingCartCommandHandler : IRequestHandler<CreateSho
         foreach (var item in request.Items)
         {
             var coupon = await discountGrpcService.GetDiscountAsync(item.ProductName);
-            item.Price -= coupon.Amount;
+            if (coupon != null)
+                item.Price -= coupon.Amount;
         }
         
         var shoppingCart = await basketRepository.UpdateBasketAsync(new ShoppingCart

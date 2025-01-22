@@ -10,6 +10,15 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+    });
+});
+
 // Add serilog
 builder.Host.UseSerilog(Logging.ConfigureLogger);
 
@@ -61,6 +70,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("CorsPolicy");
 
 app.UseAuthorization();
 

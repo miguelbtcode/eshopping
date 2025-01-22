@@ -15,6 +15,8 @@ public static class ApplicationMiddlewareExtensions
                 c.SwaggerEndpoint("/swagger/v2/swagger.json", "Basket.API v2");
             });
         }
+        
+        app.UseCors("CorsPolicy");
 
         app.UseAuthorization();
 
